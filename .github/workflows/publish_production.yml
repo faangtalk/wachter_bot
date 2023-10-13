@@ -8,7 +8,7 @@ on:
 
 env:
   IMAGE_NAME: wachterbot
-  GITHUB_USERNAME: alexeyqu
+  GITHUB_USERNAME: faangtalk
   PACKAGE_LABEL: prod
 
 jobs:

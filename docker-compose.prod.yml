@@ -3,13 +3,9 @@ version: "3.9"
 services:
   wachterbot:
     container_name: wachterbot-prod
-    image: ghcr.io/alexeyqu/wachter_bot/wachterbot:prod
+    image: ghcr.io/faangtalk/wachter_bot/wachterbot:prod
     environment:
       - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
       - TELEGRAM_ERROR_CHAT_ID=${TELEGRAM_ERROR_CHAT_ID}
-      - DATABASE_URL=${POSTGRES_URL}
+      - DATABASE_URL=sqlite:////data/db/wachter.db
     restart: unless-stopped
-
-networks:
-  default:
-    name: network-wachterbot-prod
